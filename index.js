@@ -42,7 +42,7 @@ function download(id, url, cb) {
 };
 
 async function uploadFile(request, cb) {
-    const [operation] = await self.client.longRunningRecognize(request);
+    const [operation] = await client.longRunningRecognize(request);
     const [response] = await operation.promise();
     if (response.results.length === 0) cb("This voicemail cannot be transcribed");
     const transcription = response.results.map(result => result.alternatives[0].transcript).join('\n');
