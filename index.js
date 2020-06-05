@@ -111,7 +111,7 @@ function run() {
                 }
             });
             if (tickets.length > 0) {
-                runv2(tickets[0]);
+                transcribe(tickets[0]);
             }
         }
     });
